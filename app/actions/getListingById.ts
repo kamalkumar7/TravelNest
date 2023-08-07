@@ -1,6 +1,7 @@
 import prisma from "@/app/libs/prismadb";
 
-interface IParams {
+interface IParams 
+{
   listingId?: string;
 }
 
@@ -27,11 +28,13 @@ export default async function getListingById(
       ...listing,
       createdAt: listing.createdAt.toString(),
       user: {
+
         ...listing.user,
         createdAt: listing.user.createdAt.toString(),
         updatedAt: listing.user.updatedAt.toString(),
         emailVerified: 
-          listing.user.emailVerified?.toString() || null,
+        listing.user.emailVerified?.toString() || null,
+      
       }
     };
   } catch (error: any) {
