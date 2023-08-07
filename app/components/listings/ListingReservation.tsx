@@ -1,7 +1,6 @@
 'use client';
 
 import { Range } from "react-date-range";
-
 import Button from "../Button";
 import Calendar from "../inputs/Calendar";
 
@@ -42,7 +41,7 @@ const ListingReservation: React.FC<
         ₹ {price}
         </div>
         <div className="font-light text-neutral-600">
-          night
+          per night
         </div>
       </div>
       <hr />
